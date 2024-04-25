@@ -11,7 +11,6 @@ try:
 except FileExistsError:
     pass
 
-# Set up logging
 log_file = os.path.join(OUTPUT_DIR, 'la_times.log')
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -20,7 +19,6 @@ logging.basicConfig(level=logging.INFO,
                         logging.StreamHandler()
                     ])
 
-# Check if logging configuration is successful
 if not logging.getLogger().handlers:
     raise RuntimeError("Logging configuration failed. No handlers found.")
 

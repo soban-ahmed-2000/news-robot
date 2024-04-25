@@ -12,7 +12,6 @@ class LATimesXPaths:
         SUBMIT = "//button[@data-element='search-submit-button']"
         NO_RESULTS = """//div[contains(text(),'There are not any results that match "{phrase}".')]"""
         RESULTS_FOR_TEXT = "//h1[text()='Search results for']"
-        RESULTS = "//main[@class='search-results-module-main']"
         RESULTS = '//ul[@class="search-results-module-results-menu"]//li'
 
     class Category:
