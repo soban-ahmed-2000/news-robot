@@ -25,8 +25,10 @@ if not logging.getLogger().handlers:
 
 if os.getenv("ROBOCORP_WORKER_ALIAS"):
     work_items = WorkItems()
-    search_phrase = work_items.get_work_item_variable("PHRASE")
-    category = work_items.get_work_item_variable("CATEGORY")
+    work_items.get_input_work_item()
+    variables = work_items.get_work_item_payload()
+    search_phrase = variables.get("PHRASE")
+    category = variables.get("CATEGORY")
 else:
     search_phrase = "pakistan"
     category = "World & Nation"
