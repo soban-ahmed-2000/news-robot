@@ -45,7 +45,7 @@ def task():
         la_times.sort_by_latest()
         logging.info("Results sorted by latest.")
         la_times.select_category(category)
-        logging.info("Category 'World & Nation' selected.")
+        logging.info(f"Category '{category}' selected.")
         la_times.download_news_data_excel()
         logging.info("News data downloaded and saved to Excel.")
         la_times.browser.close_all_browsers()
